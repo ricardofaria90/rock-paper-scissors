@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+        function computerSelection() {
+            var a = Math.random() * 3; 
+            a = Math.floor(a);
+            if(a==0) {
+                return 'rock';
+            } 
+            else if(a==1) {
+                return 'scissors';
+            } 
+            else if(a==2) {
+                return 'paper';
+            }
+        }
+
+        function play(playerSelection, computerSelection) {
+            if (playerSelection == 'rock' && computerSelection == 'paper') {
+                return "You Lose! Paper beats Rock!";
+            }
+            else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+                return "You win! Rock beats Scissors!";
+            }
+            else if (playerSelection == 'paper' && computerSelection == 'rock') {
+                return "You win! Paper beats Rock!";
+            }
+            else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+                return "You Lose! Scissors beats Paper!";
+            }
+            else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+                return "You win! Scissors beats Paper!";
+            }
+            else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+                return "You Lose! Rock beats Scissors!";
+            }
+            else {
+                return "It's a tie!";
+            }
+        }
+
+        const playerSelection = 'rock';
+
+        function game() {
+            var playerSelection = prompt("Enter your selection");
+            playerSelection = playerSelection;
+            
+            return play(playerSelection, computerSelection());
+            }
+
+            for (var i = 0; i < 5; i++) {
+                console.log(game());
+            }
+    
+        </script>
+    </head>
+
+    <body></body>
+</html>
